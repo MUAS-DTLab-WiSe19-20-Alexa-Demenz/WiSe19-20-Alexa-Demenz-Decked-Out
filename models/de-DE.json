@@ -1,0 +1,662 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "deckedout",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AppointmentRemindIntent",
+                    "slots": [
+                        {
+                            "name": "Date",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "{Date}",
+                                "Am {Date}"
+                            ]
+                        },
+                        {
+                            "name": "Time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "City",
+                            "type": "AMAZON.DE_CITY"
+                        },
+                        {
+                            "name": "Street",
+                            "type": "AMAZON.StreetName"
+                        },
+                        {
+                            "name": "Number",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "Topic",
+                            "type": "AMAZON.SearchQuery"
+                        },
+                        {
+                            "name": "RemindDate",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "RemindTime",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "Person",
+                            "type": "AMAZON.DE_FIRST_NAME"
+                        }
+                    ],
+                    "samples": [
+                        "AppointmentRemind",
+                        "Ich habe einen Termin mit {Person}",
+                        "Ich habe am {Date} um {Time} einen Termin",
+                        "Ich habe am {Date} um {Time} einen Termin mit {Person}"
+                    ]
+                },
+                {
+                    "name": "DoctorRemindIntent",
+                    "slots": [
+                        {
+                            "name": "Doctor",
+                            "type": "LIST_OF_DOCTORS"
+                        },
+                        {
+                            "name": "Date",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "Time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "Disease",
+                            "type": "LIST_OF_DISEASES"
+                        },
+                        {
+                            "name": "RemindTime",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "RemindDate",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "DoctorRemind",
+                        "Ich habe einen Termin bei {Doctor}",
+                        "Ich habe einen Termin wegen {Disease}",
+                        "Ich muss  am {Date} um {Time} zum {Doctor}",
+                        "Ich muss am {Date} wegen {Disease} zum {Doctor}"
+                    ]
+                },
+                {
+                    "name": "FoodRemindIntent",
+                    "slots": [
+                        {
+                            "name": "Meal",
+                            "type": "LIST_OF_MEALS"
+                        },
+                        {
+                            "name": "Time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "Location",
+                            "type": "LOCATION_IN_HOUSE"
+                        }
+                    ],
+                    "samples": [
+                        "FoodRemind",
+                        "Ich muss um {Time} {Meal}",
+                        "Erinner mich um {Time} an {Meal}",
+                        "Mein {Meal} für {Time} steht im {Location}",
+                        "Mein {Meal} für {Time} steht auf {Location}",
+                        "Mein {Meal} für {Time} steht am {Location}"
+                    ]
+                },
+                {
+                    "name": "MedicineRemindIntent",
+                    "slots": [
+                        {
+                            "name": "Medicine",
+                            "type": "LIST_OF_MEDICINE"
+                        },
+                        {
+                            "name": "Time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "Location",
+                            "type": "LOCATION_IN_HOUSE"
+                        }
+                    ],
+                    "samples": [
+                        "MedicineRemind",
+                        "Ich muss um {Time} meine {Medicine} nehmen",
+                        "Erinner mich um {Time} an meine {Medicine}",
+                        "Mein {Medicine} für {Time} steht im {Location}",
+                        "Mein {Medicine} für {Time} steht auf {Location}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_MEDICINE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "med1"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "med2"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "med3"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_DOCTORS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Hausarzt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lungenarzt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Orthopäde"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_DISEASES",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "dis1"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dis2"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dis3"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_MEALS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Frühstück"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Abendessen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mittagessen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mittag"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Abend"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essen"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LOCATION_IN_HOUSE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Badezimmerschrank"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kommode"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kühlschrank"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Küche"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wohnzimmer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Esstisch"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "AppointmentRemindIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhenIsTheAppointmentDate"
+                            }
+                        },
+                        {
+                            "name": "Time",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhenIsTheAppointmentTime"
+                            }
+                        },
+                        {
+                            "name": "City",
+                            "type": "AMAZON.DE_CITY",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhereIsTheAppointmentCity"
+                            }
+                        },
+                        {
+                            "name": "Street",
+                            "type": "AMAZON.StreetName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhereIsTheAppointmentStreet"
+                            }
+                        },
+                        {
+                            "name": "Number",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhereIsTheAppointmentNumber"
+                            }
+                        },
+                        {
+                            "name": "Topic",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhatIsTheAppointmentAbout"
+                            }
+                        },
+                        {
+                            "name": "RemindDate",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhenIsTheAppointmentRemindDate"
+                            }
+                        },
+                        {
+                            "name": "RemindTime",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhenIsTheAppointmentRemindTime"
+                            }
+                        },
+                        {
+                            "name": "Person",
+                            "type": "AMAZON.DE_FIRST_NAME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "DoctorRemindIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Doctor",
+                            "type": "LIST_OF_DOCTORS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhichDoctorIsTheAppointmentFor"
+                            }
+                        },
+                        {
+                            "name": "Time",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhenIsTheAppointmentTime"
+                            }
+                        },
+                        {
+                            "name": "Disease",
+                            "type": "LIST_OF_DISEASES",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhatDiseaseIsTheAppointmentAbout"
+                            }
+                        },
+                        {
+                            "name": "RemindTime",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhenIsTheAppointmentRemindTime"
+                            }
+                        },
+                        {
+                            "name": "RemindDate",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhenIsTheAppointmentRemindTime"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FoodRemindIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Meal",
+                            "type": "LIST_OF_MEALS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhichKindOfMeal"
+                            }
+                        },
+                        {
+                            "name": "Time",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhenToHaveTheMeal"
+                            }
+                        },
+                        {
+                            "name": "Location",
+                            "type": "LOCATION_IN_HOUSE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhereIsTheFood"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MedicineRemindIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Medicine",
+                            "type": "LIST_OF_MEDICINE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhichKindOfMedicine"
+                            }
+                        },
+                        {
+                            "name": "Time",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhenToHaveTheMedicine"
+                            }
+                        },
+                        {
+                            "name": "Location",
+                            "type": "LOCATION_IN_HOUSE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhereIsTheMedicine"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.WhenIsTheAppointmentDate",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "An welchem Tag ist der Termin?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhenIsTheAppointmentTime",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Zu welcher Zeit ist der Termin?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhenIsTheAppointmentRemindTime",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Um wie viel Uhr soll ich dich an den Termin erinnern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhenIsTheAppointmentRemindDate",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "An welchem Tag soll ich dich an den Termin erinnern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhereIsTheAppointmentCity",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "In welcher Stadt ist der Termin?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhereIsTheAppointmentStreet",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "In welcher Straße ist der Termin?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhereIsTheAppointmentNumber",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Zu welcher Hausnummer musst du für den Termin?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhatIsTheAppointmentAbout",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Um was geht es beim Termin?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhichDoctorIsTheAppointmentFor",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Zu welchem Arzt müssen sie?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhatDiseaseIsTheAppointmentAbout",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Um welches Problem geht es bei dem Termin?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhichKindOfMeal",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "An welche Mahlzeit soll ich erinnern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhenToHaveTheMeal",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wann soll ich an das Essen erinnern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhereIsTheFood",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wo befindet sich das Essen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhichKindOfMedicine",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "An welche Medizin soll ich erinnern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhenToHaveTheMedicine",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wann soll ich an die Medizin erinnern?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhereIsTheMedicine",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wo befindet sich die Medizin?"
+                    }
+                ]
+            }
+        ]
+    }
+}

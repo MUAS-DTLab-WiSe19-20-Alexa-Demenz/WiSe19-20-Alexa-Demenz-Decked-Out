@@ -1,0 +1,377 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "deckedout",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "LocateIntent",
+                    "slots": [
+                        {
+                            "name": "Object",
+                            "type": "LIST_OF_OBJECTS",
+                            "samples": [
+                                "{Object}",
+                                "Den {Object}",
+                                "Das {Object}",
+                                "Mein {Object}"
+                            ]
+                        },
+                        {
+                            "name": "Location",
+                            "type": "LIST_OF_LOCATIONS"
+                        }
+                    ],
+                    "samples": [
+                        "LocateIntent",
+                        "Ich habe mein {Object} in den {Location} gelegt",
+                        "Ich habe mein {Object} in das {Location} gelegt",
+                        "Ich habe mein {Object} in die {Location} gelegt",
+                        "Ich habe meine {Object} in den {Location} gelegt",
+                        "Ich habe meine {Object} in das {Location} gelegt",
+                        "Ich habe meine {Object} in die {Location} gelegt",
+                        "Ich lege mein {Object} in den {Location}",
+                        "Ich lege mein {Object} in die {Location}",
+                        "Ich lege mein {Object} in das {Location}"
+                    ]
+                },
+                {
+                    "name": "RelocateIntent",
+                    "slots": [
+                        {
+                            "name": "Object",
+                            "type": "LIST_OF_OBJECTS"
+                        },
+                        {
+                            "name": "CurrentLocation",
+                            "type": "LIST_OF_LOCATIONS"
+                        },
+                        {
+                            "name": "NewLocation",
+                            "type": "LIST_OF_LOCATIONS"
+                        }
+                    ],
+                    "samples": [
+                        "RelocateIntent",
+                        "Ich lege meine {Object} vom {CurrentLocation} nach {NewLocation}",
+                        "Ich lege meine {Object} von der {CurrentLocation} nach {NewLocation}",
+                        "Ich lege meine {Object} vom {CurrentLocation} in den {NewLocation}",
+                        "Ich lege meine {Object} von der {CurrentLocation} in das {NewLocation}",
+                        "Ich lege meine {Object} von der {CurrentLocation} in die {NewLocation}",
+                        "Ich lege meine {Object} von der {CurrentLocation} ins {NewLocation}",
+                        "Ich lege mein {Object} vom {CurrentLocation} nach {NewLocation}",
+                        "Ich lege mein {Object} von der {CurrentLocation} nach {NewLocation}",
+                        "Ich lege mein {Object} vom {CurrentLocation} in den {NewLocation}",
+                        "Ich lege mein {Object} von der {CurrentLocation} in das {NewLocation}",
+                        "Ich lege mein {Object} von der {CurrentLocation} in die {NewLocation}",
+                        "Ich lege mein {Object} von der {CurrentLocation} ins {NewLocation}",
+                        "Ich lege meinen {Object} vom {CurrentLocation} nach {NewLocation}",
+                        "Ich lege meinen {Object} von der {CurrentLocation} nach {NewLocation}",
+                        "Ich lege meinen {Object} vom {CurrentLocation} in den {NewLocation}",
+                        "Ich lege meinen {Object} von der {CurrentLocation} in den {NewLocation}",
+                        "Ich lege meinen {Object} vom {CurrentLocation} in das {NewLocation}",
+                        "Ich lege meinen {Object} von der {CurrentLocation} in das {NewLocation}",
+                        "Ich lege meinen {Object} vom {CurrentLocation} in die {NewLocation}",
+                        "Ich lege meinen {Object} von der {CurrentLocation} in die {NewLocation}",
+                        "Ich lege meinen {Object} vom {CurrentLocation} ins {NewLocation}",
+                        "Ich lege meinen {Object} von der {CurrentLocation} ins {NewLocation}"
+                    ]
+                },
+                {
+                    "name": "FindIntent",
+                    "slots": [
+                        {
+                            "name": "Object",
+                            "type": "LIST_OF_OBJECTS"
+                        }
+                    ],
+                    "samples": [
+                        "FindIntent",
+                        "Wo ist mein {Object}",
+                        "Wo sind meine {Object}",
+                        "Wo habe ich mein {Object} hingelegt",
+                        "Wo habe ich meine {Object} hingelegt",
+                        "Wo habe ich meinen {Object} hingelget"
+                    ]
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_OBJECTS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Schlüssel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tabletten"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Autoschlüssel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Handy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Handtasche"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kopfhörer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gehstock"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hörgerät"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kugelschreiber"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pillen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Medizin"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LIST_OF_LOCATIONS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Schrank"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Badezimmerschrank"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Esstisch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tisch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wohnzimmertisch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sekretär"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Schlüsselkasten"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kommode"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "LocateIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Object",
+                            "type": "LIST_OF_OBJECTS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhatToLocate"
+                            }
+                        },
+                        {
+                            "name": "Location",
+                            "type": "LIST_OF_LOCATIONS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhereToLocate"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "RelocateIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Object",
+                            "type": "LIST_OF_OBJECTS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhatToRelocate"
+                            }
+                        },
+                        {
+                            "name": "CurrentLocation",
+                            "type": "LIST_OF_LOCATIONS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhereWasTheObject"
+                            }
+                        },
+                        {
+                            "name": "NewLocation",
+                            "type": "LIST_OF_LOCATIONS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhereToRelocate"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FindIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Object",
+                            "type": "LIST_OF_OBJECTS",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.WhatToFind"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.WhatToLocate",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Zu welchem Gegenstand soll ich mir den Ort merken?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhereToLocate",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wo legst du {Object} hin?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Wo möchtest du {Object} hinlegen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhatToRelocate",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Was möchtest du an einen anderen Ort legen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhereWasTheObject",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wo liegt es bisher?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhereToRelocate",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Wo soll liegt es jetzt?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Wo legts du es jetzt hin?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.WhatToFind",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Was suchst du?"
+                    }
+                ]
+            }
+        ]
+    }
+}
